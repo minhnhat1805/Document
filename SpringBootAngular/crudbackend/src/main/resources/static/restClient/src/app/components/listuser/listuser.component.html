@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <h1>User</h1>
+  </div>
+  <div class="panel-body">
+      <table class="table table-striped table-bordered">
+          <thead>
+              <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Email</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>   
+              <tr *ngFor="let user of users">
+                  <td>{{user.firstName}}</td>
+                  <td>{{user.lastName}}</td>
+                  <td>{{user.email}}</td>
+                  <td><button (click)="deleteUser(user.id)">Delete</button></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+
+
+
